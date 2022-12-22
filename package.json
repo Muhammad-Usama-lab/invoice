@@ -1,0 +1,20 @@
+{
+  "name": "pdfmaker",
+  "version": "1.0.0",
+  "description": "node send pdf",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pdfmake": "^0.2.7",
+    "pdfmake-arabic": "0.0.1",
+    "roboto-font": "^0.1.0",
+    "vazirmatn": "^33.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
