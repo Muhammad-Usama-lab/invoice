@@ -17,9 +17,11 @@ var fonts = {
 var PdfPrinter = require("pdfmake");
 var printer = new PdfPrinter(fonts);
 var fs = require("fs");
-var filename = 'kjo';
+var filename = 'bahria-new';
 // playground requires you to assign document definition to a variable called dd
 
+
+// playground requires you to assign document definition to a variable called dd
 
 var dd = {
 	content: [
@@ -34,9 +36,10 @@ var dd = {
             body: [
               [
                 
-                {
-                  text:'INVOICE',
-                  margin: [200, 5, 0, 5],
+                {bold:true,
+                  text:'فاتورة ضريبية',
+                  margin: [0, 2, 0, 2],
+                  alignment:'center',
                   border: [true, true, true, true],
                 },
               ],
@@ -44,737 +47,303 @@ var dd = {
           }
           
         },
-        {
+                {
             style: 'table_css',
-          table: {
-              widths:['*','*'],
-            //heights:[40,70,40,35,57,30,'*'],
+          table: {bold:true,
+              widths:['*','*','*','*','*',],
             body: [
               [
                 { 
-                  text:'REL.P.O. No: 6511074706',
-                  border: [false, false, false, false],
+                  text:'',
+                  border: [true, true, true, true],
                 },
                 {
-                  text:'SES/ESV No:',
-                  border: [false, false, false, false],
+                  text:'شركة ابناء عبدالرحمن على البصيلى	',
+                  border: [true, true, true, true],
                 },
+                { 
+                  text:'اسم العــميل	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'1023',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'رقم الفاتورة',
+                  border: [true, true, true, true],
+                },
+
+              ],
+                [
+                { 
+                  text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'1010152299	',
+                  border: [true, true, true, true],
+                },
+                { 
+                  text:'رقم السجل التجارى	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'02 November 2022		',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'تاريخ الفاتورة',
+                  border: [true, true, true, true],
+                },
+
               ],
               [
-                {
-                  text:'Vendor No: 10009683',
-                  border: [false, false, false, false],
+                { 
+                  text:'',
+                  border: [true, true, true, true],
                 },
                 {
-                  text:'Invoice No: 990',
-                border: [false, false, false, false],
+                  text:'‫‪300047805100003‬‬	',
+                  border: [true, true, true, true],
                 },
+                { 
+                  text:'الرقم الضريبى	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'JUB/SO/01 220901		',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'الرقم المرجعي الداخلي',
+                  border: [true, true, true, true],
+                },
+
               ],
               [
-                {
-                  text:'VAT Reg.No: 300047805100003',
-                border: [false, false, false, false],
+                { 
+                  text:'',
+                  border: [true, true, true, true],
                 },
                 {
-                  text:'Invoice Date: 24 October 2022',
-                 border: [false, false, false, false],
+                  text:'الـــقــوات البـــحريــــة	',
+                  border: [true, true, true, true],
                 },
+                { 
+                  text:'اســم الشـركة	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'من 2022/05/31 الى 2022/06/29		',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'مدة الفاتورة',
+                  border: [true, true, true, true],
+                },
+
               ],
               [
-                {
-                  text:'Authorizes you to pay',
-                  border: [false, false, false, false],
-                },
-                {
-                  text:'Invoice Period: 08 May 2022 - 09 October 2022',
-                 border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'Bank Name : Riyadh Bank',
-                 border: [false, false, false, false],
-                },
-                {
-                  text:'REF No: 41466/JM/574',
-                 border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'Branch No. 297, Ahssa St., City: Riyadh',
-                  border: [false, false, false, false],
-                },
-                {
-                  text:'Cost Center: 214412',
-               border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'Bank Account No: 9920002219940',
-                  border: [false, false, false, false],
-                },
-                {
-                  text:'Invoice Type: Final Payment',
-                 border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'Name: AbdulRahman Ali AlBusaili Sons Co.',
-                 border: [false, false, false, false],
-                },
-                {
-                  text:'Reg. ERDD J GP Dep Approval: Yes',
-                border: [false, false, false, false],
-                },
-              ],
-               [
-                {
-                  text:'TO :',
-                border: [false, false, false, false],
+                { 
+                  text:'',
+                  border: [true, true, true, true],
                 },
                 {
                   text:'',
-                 border: [false, false, false, false],
+                  border: [true, true, true, true],
                 },
-              ],
-               [
-                {
-                  text:'SAUDI ARABIAN OIL COMPANY',
-               border: [false, false, false, false],
-                },
-                {
+                { 
                   text:'',
-               border: [false, false, false, false],
+                  border: [true, true, true, true],
                 },
+                {
+                  text:'الدفــعـات	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'نــوع الفاتورة',
+                  border: [true, true, true, true],
+                },
+
               ],
-               [
-                {
-                  text:'Invoice Control Unit,',
-               border: [false, false, false, false],
-                },
-                {
-                  text:'',
-                border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'Saudia Arabia',
-                border: [false, false, false, false],
-                },
-                {
-                  text:'',
-                 border: [false, false, false, false],
-                },
-              ],
-              [
-                {
-                  text:'VAT Reg. No: 300000432310003',
-              border: [false, false, false, false],
-                },
-                {
-                  text:'',
-             border: [false, false, false, false],
-                },
-              ],
+
             ],
           }
           
         },
+
         {
             style: 'table_css',
           table: {
-               widths:['*','*','*','*','*','*'],
+               widths:['*','*'],
             body: [
               [
                 {
-                  text:'Seller',
+                  text:'ق – ب – ٥ – ٢٢٠٩٠١	',
                   border: [true, true, true, true],
                 },
                 {
-                  text:'',
+                  text:'رقم العقد',
                   border: [true, true, true, true],
                 },
-                {
-                  text:': البائع',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Buyer',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'10009683',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'المشتري',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Company Name',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'832',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم أرامكوالمرجعي',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Company Name	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'شركة الزيت السعودية العربية ( ارامكو ) SAUDI ARABIAN OIL CO. (ARAMCO)',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'اسم الشركة',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'VAT ID',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'300047805100003',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم شهادة ضريبة القيمة المضافة	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'VAT ID	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'300000432310003',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم شهادة ضريبة القيمة المضافة',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Building No',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'7529',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم المبني	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Building No	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'4297	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم المبني',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Street Name',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Salah Aldin Al-Ayoubi/صلاح الدين الايوبي	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'إسم الشارع	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Street Name	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'East-District/الجادة الشرقية	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'إسم الشارع',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'District',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Al-Zahraa /الزهراء	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الحي',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'District	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'W-Dhahran/حي غرب الظهران	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الحي',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'City',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Riyadh /الرياض	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'المدينة	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'City',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Dhahran / ‫الظهران‬	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'المدينة',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Country',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'KSA /السعودية	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الدولة',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Country',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'KSA /المملكة العربية السعودية	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الدولة',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Postal Code',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'12811',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الرمزي البريدي	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Postal Code	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'34465',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الرمزي البريدي',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Additional No.',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'2071	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الرقم الأضافي	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Additional No.	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'8091	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الرقم الأضافي',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'CR Number',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'1010152299',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم السجل التجاري	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'CR Number.	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'2052101150',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'رقم السجل التجاري',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                    colSpan: 3,
-                  text:'Line Items: ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                    colSpan: 3,
-                    alignment:'right',
-                  text:'البند',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                    
-                  text:'',
-                  border: [true, true, true, true],
-                },
-              ],
-            ],
-          }
-          
-        },
-        {
-          style: 'table_css',
-          table: {
-               widths:['*','*','*','*','*','*','*','*','*'],
-            body: [
-              [
-                {
-                  text:'Description  ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:' الوصف ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Unit Price /سعر الوحدة',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Quantity/الكمية',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Taxable Amount القيمة/',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Discount/الخصم',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Tax Rate/نسبة الضريبة',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Tax Amount/قيمة الضريبة',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Item Subtotal Including VAT / المبلغ بعد الضريبة',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'Sewer Cleaning for Riyadh Facilities - October 2022 - Set-Off.	',
-                  border: [true, true, true, true],
-                },
-                 {
-                  text:'تنظيف مجاري مرافق الرياض - أكتوبر 2022 - المقاصة.		',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,177.46	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'1.00',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,177.46',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'0',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'15% ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'776.62',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,954.08',
-                  border: [true, true, true, true],
-                },
-              ],
-              
-              
-              
-              
-              
-              
-            ],
-          }
-          
-        },
-        {
-          style: 'table_css',
-          table: {
-              widths:[300,'*','*','*'],
-            body: [
-                 [
-                {colSpan:2 ,
-                  text:'Total Amount',
-                  
-                  border: [true, true, true, true],
-                },
-                {
-                  text:' ',
-                  border: [true, true, true, true],
-                },
-                {colSpan:2 ,
-                  text:'المبلغ اإلجمالي',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-              ],
-             [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Sub Total ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الإجمالي قبل الضريبة	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,177.46',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Discount',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الخصم',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'0',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Total Taxable Amount (Excluding VAT) ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'الاجمالي قبل الضريبة	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,177.46',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Total VAT ',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'قيمة الضريبة	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'776.62',
-                  border: [true, true, true, true],
-                },
-              ],
-             [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Gross Amount',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'القيمة',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,954.08',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Retention 10%',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'قيمة الاستقطاع	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'517.75',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'Total Amount Due',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'المبلغ الإجمالي	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'5,436.33',
-                  border: [true, true, true, true],
-                },
-              ],
-              [
-                {colSpan: 2,
-                  text:'Amount in Words: Five Thousand Four Hundred Thirty-Six Riyals and Thirty-Three Halala Only.	',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-                {colSpan: 2,
-                  text:'المبلغ بالكلمات:خمسة آلاف وأربعمائة وستة وثلاثون ريالاً وثلاثة وثلاثون هللة فقط.',
-                  border: [true, true, true, true],
-                },
-                {
-                  text:'',
-                  border: [true, true, true, true],
-                },
-              ],
-              
-            ],
             
-          },
-          
+              ],
+
+              [
+                {
+                text:'القوات البحرية الملكية السعودية مركز التموين البحري بالاْسطول الشرقي قسم العقود والمشتريات	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:' الــبـيــان',
+                  border: [true, true, true, true],
+                },
+              ],
+
+            ],
+          }
           
         },
+
+        {
+            style: 'table_css',
+          table: {
+               widths:['*','*','*','*','*'],
+            body: [
+              [
+                {bold:true,
+                  text:'اجمالي تكلفة المناولة والترحيل		',
+                  border: [true, true, true, true],
+                },
+                {bold:true,
+                  text:'تكلفة المناولة وترحيل اللتر الواحد	',
+                  border: [true, true, true, true],
+                },
+                {bold:true,
+                  text:'الكمية باللتر	',
+                  border: [true, true, true, true],
+                },
+                {bold:true,
+                  text:'الـوصــف	',
+                  border: [true, true, true, true],
+                },
+                {bold:true,
+                  text:'م',
+                  border: [true, true, true, true],
+                },
+              ],
+                [
+                {
+                  text:'30,000.00	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'2.00',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'15000.00',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'تكاليف خدمات عقد تزويد طائرات القوات البحرية بالوقود لأمر الشراء رقم ( 220901) للعام (1444 هــ) وتشمل خدمات ترحيل الوقود من (شركة ارامكو السعودية) وتخزينه وفلترته واعادة مناولته للطائرات شامل ضريبة القيمة المضافة	',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'1',
+                  border: [true, true, true, true],
+                },
+              ],
+
+              [
+                {
+                  text:'26,086.96		',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'المجموع الصافي بدون الضريبة',
+                  border: [true, true, true, true],
+                },
+              ],
+
+              [
+                {
+                    text:'3,913.04		',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'ضريبة القيمة المضافة %15',
+                  border: [true, true, true, true],
+                },
+              ],
+
+              [
+                {
+                    text:'30,000.00',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                  text:'',
+                  border: [true, true, true, true],
+                },
+                {
+                    text:'المجموع شامل الضريبة',
+                  border: [true, true, true, true],
+                },
+              ],
+            ],
+          }
+          
+        },
+        {
+            style:'table_css',
+        text:'القيمة بالحروف : فقط ثلاثون ألف ريال لاغير',
+        },
+        {
+            margin:[0,10,0,0],
+        text:'___________',
+        },
+                {bold:true,
+        text:'مـــديــر النقد',
+        },
+
+        {bold:true,
+        text:'أ / يعقوب فضل الله',
+        },
+
         {
 	        image:'ifooter',
 	        width:500,
@@ -783,7 +352,8 @@ var dd = {
 	styles: {
 		table_css: {
 			fontSize: 10,
-			//alignment: 'center'
+			margin:[0,10,0,0],
+			alignment: 'right'
 		}
 	},
 	images:{
